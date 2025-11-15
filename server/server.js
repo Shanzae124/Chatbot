@@ -1,7 +1,7 @@
 // server.js
 import express from "express";
 import dotenv from "dotenv";
-import cors from "cors"; // ✅ ADD THIS
+import cors from "cors"; 
 import { GoogleGenAI } from "@google/genai";
 
 dotenv.config({ debug: true });
@@ -10,7 +10,7 @@ console.log("GEMINI_API_KEY:", process.env.GEMINI_API_KEY);
 
 const app = express();
 
-app.use(cors()); // ✅ ALLOW REQUESTS FROM EXPO / MOBILE
+app.use(cors()); //ALLOW REQUESTS FROM EXPO / MOBILE
 app.use(express.json());
 
 // Create client
@@ -49,7 +49,7 @@ app.post("/ask", async (req, res) => {
   }
 });
 
-// ✅ BIND TO 0.0.0.0 FOR EXPO ACCESS
+//  BIND TO 0.0.0.0 FOR EXPO ACCESS
 const PORT = 3000;
 app.listen(PORT, "0.0.0.0", () =>
    console.log(`✅ Server running: http://0.0.0.0:${PORT}`)
