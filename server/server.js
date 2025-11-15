@@ -52,5 +52,5 @@ app.post("/ask", async (req, res) => {
 //  BIND TO 0.0.0.0 FOR EXPO ACCESS
 const PORT = 3000;
 app.listen(PORT, "0.0.0.0", () =>
-   console.log(`✅ Server running: http://0.0.0.0:${PORT}`)
+   console.log(` Server running: http://0.0.0.0:${PORT}`)
 );
